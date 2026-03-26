@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 105" role="img" aria-label="OC8 Finance">
+  <defs>
+    <linearGradient id="fbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#193342"/>
+      <stop offset="100%" stop-color="#184b4a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fundo arredondado -->
+  <rect width="100" height="105" rx="18" fill="url(#fbg)"/>
+
+  <!-- ── TOP SECTION: DOIS LOOPS ── -->
+
+  <!-- LEFT RING: loop esquerdo com buraco interno -->
+  <!-- cx=22, cy=26, outer_rx=22 ry=25, inner cx=26 cy=26 rx=16 ry=14 -->
+  <path fill="#2b7261" fill-rule="evenodd" d="
+    M 0,26 A 22,25 0 1,1 44,26 A 22,25 0 1,1 0,26 Z
+    M 10,26 A 16,14 0 1,1 42,26 A 16,14 0 1,1 10,26 Z
+  "/>
+
+  <!-- RIGHT RING: loop direito com buraco interno -->
+  <!-- cx=78, cy=26 outer_rx=22 ry=25, inner cx=74 ry=14 -->
+  <path fill="#2b7261" fill-rule="evenodd" d="
+    M 56,26 A 22,25 0 1,1 100,26 A 22,25 0 1,1 56,26 Z
+    M 58,26 A 16,14 0 1,1 90,26 A 16,14 0 1,1 58,26 Z
+  "/>
+
+  <!-- BRIDGE: peça central que conecta os dois loops -->
+  <path fill="#2b7261" d="
+    M 38,1 C 44,-1 56,-1 62,1
+    L 62,26 C 59,30 41,30 38,26 Z
+  "/>
+
+  <!-- NOTCH: abertura top-right do loop direito (cria o C/b) -->
+  <path fill="url(#fbg)" d="M 80,1 C 88,1 99,9 99,18 L 99,1 Z"/>
+
+  <!-- GAP central no topo entre os loops (separa visualmente) -->
+  <path fill="url(#fbg)" d="M 43,1 h 14 v 4 C 55,6 45,6 43,5 Z"/>
+
+  <!-- ── BOTTOM SECTION: U DUPLO ── -->
+
+  <!-- OUTER U: anel externo mais claro -->
+  <path fill="#2b7261" d="
+    M 1,51 H 99 V 71
+    C 99,104 1,104 1,71 Z
+  "/>
+
+  <!-- INNER U: anel interno mais escuro (forest) -->
+  <path fill="#184b4a" d="
+    M 14,51 H 86 V 69
+    C 86,95 14,95 14,69 Z
+  "/>
+
+  <!-- HOLE: buraco central do U (mostra fundo) -->
+  <path fill="url(#fbg)" d="
+    M 27,51 H 73 V 67
+    C 73,85 27,85 27,67 Z
+  "/>
+</svg>

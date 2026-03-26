@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#193342"/>
+      <stop offset="70%" stop-color="#193342"/>
+      <stop offset="100%" stop-color="#184b4a"/>
+    </linearGradient>
+    <linearGradient id="teal_grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2b7261"/>
+      <stop offset="100%" stop-color="#184b4a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fundo -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Linha horizontal sutil -->
+  <rect x="0" y="420" width="1200" height="1" fill="rgba(255,255,255,.04)"/>
+
+  <!-- ── SÍMBOLO DECORATIVO GRANDE (direita, semi-transparente) ── -->
+  <!-- Escala: ~3x do favicon (viewBox 100x105 → ~330x347 aqui) -->
+  <!-- Posição: centrado em x=940, y=315 -->
+  <!-- Translate: x_offset = 940 - 50*3.3 = 940-165=775, y_offset=315-52.5*3.3=315-173=142 -->
+  <!-- scale=3.3, translate(775, 142) -->
+  <g transform="translate(740,90) scale(3.5)" opacity="0.10">
+    <!-- Left ring -->
+    <path fill="white" fill-rule="evenodd" d="
+      M 0,26 A 22,25 0 1,1 44,26 A 22,25 0 1,1 0,26 Z
+      M 10,26 A 16,14 0 1,1 42,26 A 16,14 0 1,1 10,26 Z
+    "/>
+    <!-- Right ring -->
+    <path fill="white" fill-rule="evenodd" d="
+      M 56,26 A 22,25 0 1,1 100,26 A 22,25 0 1,1 56,26 Z
+      M 58,26 A 16,14 0 1,1 90,26 A 16,14 0 1,1 58,26 Z
+    "/>
+    <!-- Bridge -->
+    <path fill="white" d="M 38,1 C 44,-1 56,-1 62,1 L 62,26 C 59,30 41,30 38,26 Z"/>
+    <!-- Notch -->
+    <path fill="#193342" d="M 80,1 C 88,1 99,9 99,18 L 99,1 Z"/>
+    <!-- Outer U -->
+    <path fill="white" d="M 1,51 H 99 V 71 C 99,104 1,104 1,71 Z"/>
+    <!-- Inner U -->
+    <path fill="#193342" d="M 22,51 H 78 V 68 C 78,91 22,91 22,68 Z"/>
+  </g>
+
+  <!-- Linha vertical esquerda decorativa -->
+  <rect x="80" y="80" width="3" height="470" rx="1.5" fill="url(#teal_grad)" opacity=".5"/>
+
+  <!-- ── CONTEÚDO PRINCIPAL ── -->
+
+  <!-- Símbolo pequeno (inline, ao lado do texto) -->
+  <g transform="translate(108,105) scale(0.52)">
+    <path fill="#2b7261" fill-rule="evenodd" d="
+      M 0,26 A 22,25 0 1,1 44,26 A 22,25 0 1,1 0,26 Z
+      M 10,26 A 16,14 0 1,1 42,26 A 16,14 0 1,1 10,26 Z
+    "/>
+    <path fill="#2b7261" fill-rule="evenodd" d="
+      M 56,26 A 22,25 0 1,1 100,26 A 22,25 0 1,1 56,26 Z
+      M 58,26 A 16,14 0 1,1 90,26 A 16,14 0 1,1 58,26 Z
+    "/>
+    <path fill="#2b7261" d="M 38,1 C 44,-1 56,-1 62,1 L 62,26 C 59,30 41,30 38,26 Z"/>
+    <path fill="#193342" d="M 80,1 C 88,1 99,9 99,18 L 99,1 Z"/>
+    <path fill="#2b7261" d="M 1,51 H 99 V 71 C 99,104 1,104 1,71 Z"/>
+    <path fill="#184b4a" d="M 14,51 H 86 V 69 C 86,95 14,95 14,69 Z"/>
+    <path fill="#193342" d="M 27,51 H 73 V 67 C 73,85 27,85 27,67 Z"/>
+  </g>
+
+  <!-- OC8 -->
+  <text x="168" y="163"
+    font-family="-apple-system,BlinkMacSystemFont,'SF Pro Display','Helvetica Neue',Arial,sans-serif"
+    font-size="90" font-weight="700" letter-spacing="-3"
+    fill="white">OC8</text>
+
+  <!-- finance -->
+  <text x="171" y="215"
+    font-family="-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',Arial,sans-serif"
+    font-size="36" font-weight="300" letter-spacing="8"
+    fill="rgba(255,255,255,.45)">finance</text>
+
+  <!-- Divisor -->
+  <rect x="108" y="238" width="96" height="2.5" rx="1.25" fill="#2b7261"/>
+
+  <!-- Tagline principal -->
+  <text x="108" y="294"
+    font-family="-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif"
+    font-size="36" font-weight="400"
+    fill="rgba(255,255,255,.82)">Estrutura para crescer.</text>
+
+  <!-- Sub -->
+  <text x="108" y="340"
+    font-family="-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif"
+    font-size="24" font-weight="300" letter-spacing=".5"
+    fill="rgba(255,255,255,.38)">Contabilidade · Financeiro · Tributário</text>
+
+  <!-- Pill CTA -->
+  <rect x="108" y="396" width="282" height="52" rx="26" fill="#2b7261"/>
+  <text x="249" y="428" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif"
+    font-size="20" font-weight="600"
+    fill="white">Agendar diagnóstico</text>
+
+  <!-- URL bottom -->
+  <text x="108" y="572"
+    font-family="-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif"
+    font-size="20" fill="rgba(255,255,255,.18)">oc8.com.br</text>
+</svg>

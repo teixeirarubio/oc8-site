@@ -1,0 +1,78 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/img/blog"
+public_folder: "/assets/img/blog"
+
+site_url: "https://oc8.com.br"
+display_url: "https://oc8.com.br"
+logo_url: "/assets/img/logo-dark.png"
+
+locale: "pt"
+
+collections:
+  - name: "posts"
+    label: "Posts do Blog"
+    label_singular: "Post"
+    folder: "admin/posts"
+    create: true
+    slug: "{{slug}}"
+    format: "frontmatter"
+    extension: "md"
+    summary: "{{title}} — {{date}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Slug (URL)", name: "slug", widget: "string",
+          hint: "Ex.: planejamento-tributario-2025 (sem espaços, sem acentos)" }
+      - { label: "Descrição (SEO)", name: "description", widget: "text",
+          hint: "Aparece nos resultados de busca. Máximo 160 caracteres." }
+      - { label: "Categoria", name: "category", widget: "select",
+          options: ["Contabilidade", "Financeiro", "Tributário", "Governança",
+                    "BPO Financeiro", "Societário", "Compliance", "Auditoria",
+                    "M&A", "Startups", "Estratégia"] }
+      - { label: "Data de publicação", name: "date", widget: "datetime",
+          format: "DD MMM YYYY", date_format: "DD MMM YYYY", time_format: false }
+      - { label: "Publicado", name: "published", widget: "boolean", default: true }
+      - { label: "Destaque", name: "featured", widget: "boolean", default: false,
+          hint: "Posts em destaque aparecem primeiro no hub de conteúdo" }
+
+      - { label: "Imagem de capa", name: "featured_image", widget: "image",
+          required: false, hint: "Recomendado: 1200x630px, formato JPG ou WebP" }
+      - { label: "Alt da imagem de capa", name: "featured_image_alt",
+          widget: "string", required: false,
+          hint: "Descrição da imagem para acessibilidade e SEO" }
+
+      - { label: "Autor", name: "author_name", widget: "string",
+          default: "Equipe OC8" }
+      - { label: "Cargo do autor", name: "author_role", widget: "string",
+          required: false, hint: "Ex.: Sócio — Finanças & Governança" }
+      - { label: "LinkedIn do autor", name: "author_linkedin",
+          widget: "string", required: false,
+          hint: "URL completa. Ex.: https://www.linkedin.com/in/rubioteixeiraoctus" }
+      - { label: "Foto do autor", name: "author_photo", widget: "image",
+          required: false }
+      - { label: "Tempo de leitura", name: "reading_time", widget: "string",
+          required: false, hint: "Ex.: 4 min de leitura" }
+
+      - label: "Solução relacionada (URL)"
+        name: "related_service"
+        widget: "select"
+        required: false
+        options:
+          - { label: "Contabilidade", value: "contabilidade.html" }
+          - { label: "Gestão Financeira", value: "gestao-financeira.html" }
+          - { label: "BPO Financeiro", value: "bpo-financeiro.html" }
+          - { label: "Tributário", value: "tributario.html" }
+          - { label: "Societário", value: "societario.html" }
+          - { label: "Compliance", value: "compliance.html" }
+          - { label: "Governança", value: "governanca.html" }
+          - { label: "Auditoria & Valuation", value: "auditoria.html" }
+          - { label: "M&A & Due Diligence", value: "ma.html" }
+          - { label: "Startups", value: "startups.html" }
+
+      - { label: "Label do botão da solução", name: "related_service_label",
+          widget: "string", default: "Ver solução relacionada",
+          required: false }
+
+      - { label: "Conteúdo", name: "body", widget: "markdown" }
