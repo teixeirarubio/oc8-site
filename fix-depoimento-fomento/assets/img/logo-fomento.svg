@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect width="400" height="400" fill="#FFD700"/>
+  
+  <!-- Outer white ring -->
+  <circle cx="200" cy="200" r="175" fill="white"/>
+  <!-- Inner yellow circle -->
+  <circle cx="200" cy="200" r="115" fill="#FFD700"/>
+  <!-- Inner white circle (sun center) -->
+  <circle cx="200" cy="200" r="65" fill="white"/>
+
+  <!-- Top arc: FOMENTO -->
+  <defs>
+    <path id="topArc" d="M 200 200 m -148 0 a 148 148 0 0 1 296 0"/>
+    <path id="bottomArc" d="M 200 200 m 148 0 a 148 148 0 0 1 -296 0"/>
+  </defs>
+
+  <!-- Top letters F O M E N T O -->
+  <text font-family="'Arial Black', 'Arial', sans-serif" font-weight="900" font-size="46" letter-spacing="6">
+    <!-- F -->
+    <textPath href="#topArc" startOffset="2%">
+      <tspan fill="#1A1AE6">F</tspan><tspan fill="#E6196E">O</tspan><tspan fill="#19A847">M</tspan><tspan fill="#1A1AE6">E</tspan><tspan fill="#E63019">N</tspan><tspan fill="#19A847">T</tspan><tspan fill="#E6196E">O</tspan>
+    </textPath>
+  </text>
+
+  <!-- Bottom letters F O M E N T O (rotated) -->
+  <text font-family="'Arial Black', 'Arial', sans-serif" font-weight="900" font-size="46" letter-spacing="6">
+    <textPath href="#bottomArc" startOffset="2%">
+      <tspan fill="#1A1AE6">F</tspan><tspan fill="#E6196E">O</tspan><tspan fill="#19A847">M</tspan><tspan fill="#1A1AE6">E</tspan><tspan fill="#E63019">N</tspan><tspan fill="#19A847">T</tspan><tspan fill="#E6196E">O</tspan>
+    </textPath>
+  </text>
+
+  <!-- Vertical dividers -->
+  <rect x="197" y="25" width="6" height="60" rx="3" fill="#FFD700"/>
+  <rect x="197" y="315" width="6" height="60" rx="3" fill="#FFD700"/>
+</svg>
